@@ -16,10 +16,13 @@ int main() {
 	sprite3.setTexture(texture);
 	sprite4.setTexture(texture);
 	
+	float size_x = texture.getSize().x;
+	float size_y = texture.getSize().y;
+
 	sprite1.setPosition(0, 0);
-	sprite2.setPosition(800-128,0);
-	sprite3.setPosition(0, 600-128);
-	sprite4.setPosition(800-128, 600-128);
+	sprite2.setPosition(800-size_x,0);
+	sprite3.setPosition(0, 600-size_y);
+	sprite4.setPosition(800-size_x, 600-size_y);
 
 	sf::RenderWindow App(sf::VideoMode(800, 600, 32),"Sniper^4");
 	while (App.isOpen())
